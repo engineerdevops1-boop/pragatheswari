@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pragatheswari D | Senior DevOps & SRE Engineer</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Accordion */
+        .accordion {
+            background: #1d3557;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .active, .accordion:hover {
+            background: #457b9d;
+        }
+
+        .panel {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: auto;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .panel ul {
+            padding-left: 20px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -77,24 +115,137 @@
 </section>
 
 <section>
-    <h2>Professional Experience</h2>
+    <h2>Professional Experience (Collapsible)</h2>
 
-    <h3>Anthology Inc | Senior DevOps Engineer II / SRE II (2017 – Present)</h3>
-    <p>Worked on Azure DevOps CI/CD pipelines, GitHub SCM, AI-based DevOps automation, Azure migrations, 
-       Kubernetes (AKS), Terraform, Bicep, F5 load balancing, observability dashboards, proactive monitoring, 
-       and cloud security hardening.</p>
+    <!-- ========== Accordion 1 ========== -->
+    <button class="accordion">09/2017 – Present — Anthology Inc (Senior DevOps Engineer II / SRE II)</button>
+    <div class="panel">
+        <h4>Responsibilities:</h4>
+        <ul>
+            <li>Heavily used GitHub and Azure DevOps as SCM tools. Followed branching strategies and PR for code merge.</li>
+            <li>Created CI/CD pipelines in Azure DevOps (both classic and YAML). Automated VSTS agent installation using PowerShell.</li>
+            <li>Written scripts to deploy code to Azure Web Apps and DB scripts to Managed SQL and Azure SQL instances.</li>
+            <li>Experience in writing KQL queries to set up alerts through Azure Log Analytics workspace. Captured performance metrics by creating Apdex scores for sites and publishing dashboards.</li>
+            <li>Created Azure Data Factory pipelines to process data.</li>
+            <li>Increased system reliability and reduced downtime through proactive troubleshooting and RCA. Created POCs for AI-based solutions.</li>
+            <li>Integrated Generative AI and LLM-based automation into DevOps workflows to analyze deployment logs, predict pipeline failures, and recommend corrective actions using Azure OpenAI.</li>
+            <li>Used OpenAI GPT and BERT-based models for anomaly detection in monitoring data (Azure Log Analytics, Splunk) to proactively identify performance degradations and reduce MTTR.</li>
+            <li>Developed AI-assisted observability dashboards that correlate infrastructure metrics and application logs to generate natural-language insights for SRE teams.</li>
+            <li>Deployed the Azure Site Reliability Engineering (SRE) Agent for proactive health checks, telemetry collection, and automated incident detection.</li>
+            <li>Deployed Azure Data Lake, Data Warehouse, and Azure Analysis Services.</li>
+            <li>Integrated Azure Monitor, Log Analytics, and Application Insights data into Grafana, building custom dashboards for application performance, reliability, and infrastructure health.</li>
+            <li>Implemented Azure Chaos Studio to simulate outages and measure system reliability.</li>
+            <li>Pushed images to Azure Container Registry (ACR) and created Azure Kubernetes Service (AKS) clusters.</li>
+            <li>Experience in writing PowerShell, Shell, Python, YAML, and Batch scripts.</li>
+            <li>Installed, configured, and administered Jenkins for on-prem application builds and deployments.</li>
+            <li>Installed and configured Octopus Deploy; automated tentacle installation, upgrades, and Jenkins integration.</li>
+            <li>Performed Maven builds and packaging using NPM and NuGet.</li>
+            <li>Built and installed VB DLLs, .NET DLLs, EXEs, and related application binaries.</li>
+            <li>Automated deployments to IIS web servers and installed services on application VMs.</li>
+            <li>Executed DB migration scripts and performed dry runs.</li>
+            <li>Streamlined infrastructure management using Ansible, Kubernetes, ARM templates, Terraform, Azure Bicep.</li>
+            <li>Written Azure Runbooks for system maintenance tasks.</li>
+            <li>Designed and implemented Azure Logic Apps to automate workflows such as incident alerts and integration with ServiceNow.</li>
+            <li>Migrated applications from the datacenter to Azure using Azure Site Recovery and Azure Migrate.</li>
+            <li>Provisioned VMs, VNets, gateways, peering, NSGs, firewalls, and storage.</li>
+            <li>Configured Log Analytics workspace; proficient with Azure Storage Explorer.</li>
+            <li>Configured Application Gateway, Load Balancers, Front Door, and routing rules.</li>
+            <li>Created self-service options for developers to provision on-demand resources.</li>
+            <li>Used F5 (Big-IP) for on-prem load balancing; migrated to Azure Application Gateway.</li>
+            <li>Administered F5 nodes, rules, pools, monitors, VIPs, data group lists, certificates.</li>
+            <li>Blocked weak ciphers (SSLv3/TLSv1.0/1.1).</li>
+            <li>Hosted DNS in AWS Route 53, F5 DNS Zone, Cloudflare.</li>
+            <li>Configured Cloudflare DNS, WAF, SSL/TLS, caching, rate-limiting.</li>
+            <li>Migrated legacy applications to cloud platforms.</li>
+            <li>Automated SQL DB migration including DACPAC conversions.</li>
+            <li>Upgraded OS from Windows 2008 R2 → 2022.</li>
+            <li>Proficient with VMware and vSphere Client.</li>
+            <li>Installed Azure Monitoring Agent (AMA).</li>
+            <li>Configured monitoring in LogicMonitor, Splunk, New Relic.</li>
+            <li>Installed Microsoft Defender and Tenable.</li>
+            <li>Performed periodic security checks.</li>
+            <li>Used Azure Security Center and Burp Suite for audits.</li>
+            <li>Synced Azure Entra with AD; configured MFA, GPOs, App Registrations.</li>
+            <li>Migrated from Couchbase to Redis and to Azure Managed Redis.</li>
+            <li>Installed RabbitMQ clusters (Windows & Linux).</li>
+            <li>Provisioned Azure Service Bus Topics and Queues.</li>
+            <li>Configured CAS & Shibboleth for SSO.</li>
+            <li>Developed MS SharePoint site and Power Automate integrations.</li>
+            <li>Configured WSUS and BatchPatch.</li>
+            <li>Installed Tomcat and Nginx.</li>
+            <li>Used GlobalScape FTP.</li>
+            <li>Led change management and outage processes.</li>
+            <li>Managed secrets using LastPass and Thycotic.</li>
+            <li>Integrated Jenkins with AWS applications.</li>
+            <li>Installed Citrix and published apps.</li>
+            <li>Worked in Agile/Scrum/Kanban; PMO member.</li>
+            <li>Complied with GDPR and FedRAMP.</li>
+            <li>Documented procedures using Confluence, ADO Wiki, Jira.</li>
+        </ul>
+    </div>
 
-    <h3>Hobsons Inc | DevOps Engineer (2017)</h3>
-    <p>Jenkins builds, Octopus Deploy, Ansible IaC, Windows Server upgrades, load balancing (F5), Route53, WSUS patching.</p>
+    <!-- ========== Accordion 2 ========== -->
+    <button class="accordion">07/2017 – 09/2017 — Hobsons Inc (DevOps Engineer)</button>
+    <div class="panel">
+        <ul>
+            <li>Used GitHub as the code repository.</li>
+            <li>Performed builds and deployments via Jenkins and Octopus Deploy.</li>
+            <li>Used Ansible as IaC; written playbooks for provisioning datacenter infrastructure.</li>
+            <li>Migrated application servers, SQL servers, file servers and AD servers from 2008 to 2012v2.</li>
+            <li>Configured load balancer on F5; migrated DNS to AWS Route53.</li>
+            <li>Configured WSUS for Windows server patching.</li>
+        </ul>
+    </div>
 
-    <h3>General Electric Healthcare | DevOps Engineer (2017)</h3>
-    <p>SCM administration, Jenkins/Nexus setup, Azure Web App CI/CD, build optimizations, version audits.</p>
+    <!-- ========== Accordion 3 ========== -->
+    <button class="accordion">01/2017 – 06/2017 — General Electric Healthcare (DevOps Engineer)</button>
+    <div class="panel">
+        <ul>
+            <li>Administered SCM tools including SVN, TFS, Git.</li>
+            <li>Migrated SVN/CruiseControl to Jenkins/Git.</li>
+            <li>Installed Jenkins, Nexus, CruiseControl, CSVN, SonarQube.</li>
+            <li>Created multibranch pipelines using JAAS.</li>
+            <li>Developed MSBuild, Maven, Visual Build Pro automation.</li>
+            <li>Managed Nexus repository for Talend jobs.</li>
+            <li>Implemented Azure PaaS staging-to-prod slot swaps.</li>
+            <li>Deployed sites using Azure Web Apps CI/CD.</li>
+            <li>Performed compliance audits ensuring version control.</li>
+            <li>Adhered to ISO 90001 standards.</li>
+        </ul>
+    </div>
 
-    <h3>MagnaSpan Inc | DevOps Engineer (2016 – 2017)</h3>
-    <p>Git administration, Nexus, Maven migration, WebLogic deployments, release management, Linux & shell automation.</p>
+    <!-- ========== Accordion 4 ========== -->
+    <button class="accordion">10/2016 – 01/2017 — MagnaSpan Inc (DevOps Engineer)</button>
+    <div class="panel">
+        <ul>
+            <li>Installed and administered Git.</li>
+            <li>Automated Git backup/replication tasks.</li>
+            <li>Migrated ANT to Maven.</li>
+            <li>Installed Nexus; managed users/permissions.</li>
+            <li>Deployed Java/J2EE to WebLogic in CI flow.</li>
+            <li>Maintained shell scripts for automation.</li>
+            <li>Used ANT tasks for Linux deployments.</li>
+            <li>Observed Agile practices.</li>
+        </ul>
+    </div>
 
-    <h3>Maersk | System Engineer (2013 – 2015)</h3>
-    <p>Jenkins CI, Maven builds, UNIX admin, WebLogic & automation scripting, dependency management, release engineering.</p>
+    <!-- ========== Accordion 5 ========== -->
+    <button class="accordion">06/2013 – 08/2015 — Maersk (System Engineer)</button>
+    <div class="panel">
+        <ul>
+            <li>Integrated SVN + Maven with Jenkins CI.</li>
+            <li>Migrated Ant builds to Maven.</li>
+            <li>Managed Nexus repository and shell scripts.</li>
+            <li>Automated deployments across multiple environments.</li>
+            <li>Installed Jenkins master-slave setup on Linux.</li>
+            <li>Managed branching and merging in SVN/Perforce.</li>
+            <li>Automated WebLogic deployments using WLST.</li>
+            <li>Migrated Build Forge to Jenkins pipelines.</li>
+            <li>Maintained UNIX/Linux/Solaris deployment environments.</li>
+            <li>Handled release coordination with QA, Dev, DBA teams.</li>
+        </ul>
+    </div>
+
 </section>
 
 <section>
@@ -117,6 +268,21 @@ function showPhone() {
 
 function showEmail() {
     document.getElementById("emailMasked").textContent = "engineer.devops1@gmail.com";
+}
+
+/* Accordion Script */
+var acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
 </script>
 
