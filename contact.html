@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Pragatheswari D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Pragatheswari D</a>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section-contact">
+      <h1>Contact</h1>
+      <p class="muted">Use the controls below to reveal my contact details. Resume available for download.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Phone</h3>
+          <p id="phoneMasked">+1 (***) ***-****</p>
+          <button class="btn" onclick="showPhone()">View Phone</button>
+        </div>
+
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p id="emailMasked">********@*****.com</p>
+          <button class="btn" onclick="showEmail()">View Email</button>
+        </div>
+
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/pragatheswari-d-b81bb91b0/" target="_blank" rel="noopener">pragatheswari-d-b81bb91b0</a></p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a class="btn primary" href="/mnt/data/PragatheswariD-SrDevOpsEngII.pdf" download>⬇️ Download Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2025 Pragatheswari D</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const path = location.pathname.split('/').pop() || 'contact.html';
+      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+        if (a.getAttribute('href') === path) a.classList.add('active');
+      });
+    })();
+
+    function showPhone() {
+      document.getElementById('phoneMasked').textContent = '+1 (571) 357-9404';
+    }
+    function showEmail() {
+      document.getElementById('emailMasked').textContent = 'engineer.devops1@gmail.com';
+    }
+  </script>
+</body>
+</html>
