@@ -7,13 +7,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Pragatheswari D</a>
+      <div class="brand-block">
+        <a class="brand" href="index.html">PRAGATHESWARI D</a>
+        <div class="brand-sub">Senior DevOps Engineer II / Site Reliability Engineer II</div>
+      </div>
+
       <nav class="main-nav" role="navigation" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
         <a href="experience.html" class="nav-link">Experience</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="index.html#achievements" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -21,7 +27,7 @@
   <main>
     <section class="container section-contact">
       <h1>Contact</h1>
-      <p class="muted">Use the controls below to reveal my contact details. Resume available for download.</p>
+      <p class="muted">Use the controls below to reveal contact details. Resume available for download.</p>
 
       <div class="contact-grid">
         <div class="contact-card">
@@ -54,20 +60,21 @@
     </div>
   </footer>
 
-  <script>
-    (function(){
-      const path = location.pathname.split('/').pop() || 'contact.html';
-      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        if (a.getAttribute('href') === path) a.classList.add('active');
-      });
-    })();
+<script>
+  (function(){
+    const path = location.pathname.split('/').pop() || 'contact.html';
+    document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+      if (a.getAttribute('href') === path) a.classList.add('active');
+    });
+  })();
 
-    function showPhone() {
-      document.getElementById('phoneMasked').textContent = '+1 (571) 357-9404';
-    }
-    function showEmail() {
-      document.getElementById('emailMasked').textContent = 'engineer.devops1@gmail.com';
-    }
-  </script>
+  function showPhone() {
+    document.getElementById('phoneMasked').textContent = '+1 (571) 357-9404';
+  }
+  function showEmail() {
+    document.getElementById('emailMasked').textContent = 'engineer.devops1@gmail.com';
+  }
+</script>
+
 </body>
 </html>
