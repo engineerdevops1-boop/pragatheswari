@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Pragatheswari D</a>
+      <div class="brand-block">
+        <a class="brand" href="index.html">PRAGATHESWARI D</a>
+        <div class="brand-sub">Senior DevOps Engineer II / Site Reliability Engineer II</div>
+      </div>
+
       <nav class="main-nav" role="navigation" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="experience.html" class="nav-link active">Experience</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="index.html#achievements" class="nav-link">Achievements</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
@@ -22,10 +28,10 @@
     <section class="container section-experience">
       <header class="section-header">
         <h1>Professional Experience</h1>
-        <p class="muted">Click each role to expand full responsibilities. Long sections are scrollable inside the panel.</p>
+        <p class="muted">Click each role to expand. Long sections are scrollable inside the panel.</p>
       </header>
 
-      <!-- Accordion: Anthology (full content preserved) -->
+      <!-- Anthology (full preserved content) -->
       <button class="accordion">09/2017 – Present — Anthology Inc, F/K/A Campus Management Corp — Senior DevOps Engineer II / Site Reliability Engineer II</button>
       <div class="panel">
         <h4>Responsibilities:</h4>
@@ -101,7 +107,6 @@
       <!-- Hobsons -->
       <button class="accordion">07/2017 – 09/2017 — Employer: Hobsons Inc, VA — DevOps Engineer</button>
       <div class="panel">
-        <h4>Responsibilities:</h4>
         <ul>
           <li>Used GitHub as the code repository.</li>
           <li>Performed builds and deployments via Jenkins and Octopus Deploy.</li>
@@ -114,7 +119,6 @@
       <!-- Select Source / GE -->
       <button class="accordion">01/2017 – 06/2017 — Employer: Select Source International — Client: General Electric Healthcare, VA — DevOps Engineer</button>
       <div class="panel">
-        <h4>Responsibilities:</h4>
         <ul>
           <li>Administered and maintained SCM tools, including SVN, TFS, and Git; created branches, tags, and implemented GitHub commit hooks.</li>
           <li>Migrated source control and build systems from SVN/CruiseControl to Jenkins and Git, improving build reliability and speed.</li>
@@ -133,9 +137,8 @@
       </div>
 
       <!-- MagnaSpan -->
-      <button class="accordion">10/2016 – 01/2017 — Employer: MagnaSpan Inc — Client: PG&E, CA — DevOps Engineer</button>
+      <button class="accordion">10/2016 – 01/2017 — Employer: MagnaSpan Inc — Client: PG&amp;E, CA — DevOps Engineer</button>
       <div class="panel">
-        <h4>Responsibilities:</h4>
         <ul>
           <li>Installed, configured, and administered Git for multiple corporate applications; managed branching, merging, and conflict resolution.</li>
           <li>Automated Git maintenance with scripts for backups, replication, and pre/post-commit hooks.</li>
@@ -153,7 +156,6 @@
       <!-- Maersk -->
       <button class="accordion">06/2013 – 08/2015 — Maersk, India — System Engineer</button>
       <div class="panel">
-        <h4>Responsibilities:</h4>
         <ul>
           <li>Integrated Subversion and Maven with Jenkins to implement continuous integration.</li>
           <li>Migrated build process from Ant to Maven 2 to standardize builds across applications.</li>
@@ -169,23 +171,24 @@
         </ul>
       </div>
 
-      <!-- Achievements -->
-      <button class="accordion" id="achievements-btn">Achievements</button>
-      <div class="panel" id="achievements">
-        <h4>Achievements</h4>
+      <!-- Achievements Panel -->
+      <button class="accordion">Achievements</button>
+      <div class="panel">
         <ul>
-          <li>• Add your achievements here (awards, certifications, large impact metrics, published articles).</li>
-          <li>• Example: Reduced CI pipeline failures by 40% via preflight checks. (Replace with real items)</li>
+          <li>Successfully migrated enterprise SVN repositories to GitHub with near-zero disruption, implementing branch protection, PR governance, and standardized Git workflows.</li>
+          <li>Led CI/CD modernization (TFVC → Jenkins → Azure DevOps), standardized pipelines for 30+ apps, reduced build failures by 60%.</li>
+          <li>Architected automated provisioning across on-prem and Azure; reusable IaC modules reduced manual work by 80%.</li>
+          <li>Designed Azure SQL migration pipelines; reduced migration time by 75% (24 hrs → 6 hrs for 1 TB).</li>
+          <li>Achieved 99.99% SLA uptime; led cost optimization programs saving millions.</li>
         </ul>
       </div>
 
-      <!-- Leadership -->
-      <button class="accordion" id="leadership-btn">Leadership Roles</button>
-      <div class="panel" id="leadership">
-        <h4>Leadership Roles</h4>
+      <!-- Leadership Panel -->
+      <button class="accordion">Leadership Roles</button>
+      <div class="panel">
         <ul>
-          <li>• Add leadership roles—team lead, mentor, PMO responsibilities—here.</li>
-          <li>• Example: Led on-call rotation and SRE incident reviews. (Replace with real items)</li>
+          <li>Led cross-functional migration programs, mentored junior engineers, and chaired incident retrospectives and change review boards.</li>
+          <li>Owned on-call reliability processes and SLO/SLA governance across customer environments.</li>
         </ul>
       </div>
 
@@ -198,34 +201,35 @@
     </div>
   </footer>
 
-  <script>
-    // nav highlight
-    (function(){
-      const path = location.pathname.split('/').pop() || 'experience.html';
-      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        if (a.getAttribute('href') === path) a.classList.add('active');
-      });
-    })();
-
-    // Accordion behavior
-    const acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-
-    // Expand first panel by default
-    window.addEventListener('load', () => {
-      const first = document.querySelector('.accordion');
-      if (first) first.click();
+<script>
+  // nav highlight
+  (function(){
+    const path = location.pathname.split('/').pop() || 'experience.html';
+    document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+      if (a.getAttribute('href') === path) a.classList.add('active');
     });
-  </script>
+  })();
+
+  // Accordion behavior
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  // expand first accordion on load
+  window.addEventListener('load', () => {
+    const first = document.querySelector('.accordion');
+    if (first) first.click();
+  });
+</script>
+
 </body>
 </html>
